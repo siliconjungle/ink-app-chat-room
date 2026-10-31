@@ -1,0 +1,45 @@
+{
+  "slug": "chat-room",
+  "title": "Chat room",
+  "repository": "https://github.com/siliconjungle/ink-app-chat-room",
+  "directory": "web",
+  "entry": "index.html",
+  "backend": {
+    "entry": "server.mjs"
+  },
+  "desktop": {
+    "entry": "chat-room",
+    "icon": {
+      "svg": "web/icon.svg"
+    },
+    "dock": 60,
+    "shortcut": true,
+    "window": {
+      "width": 780,
+      "height": 650
+    }
+  },
+  "capabilities": [
+    "world.read",
+    "desktop.open"
+  ],
+  "commands": [
+    {
+      "id": "draft",
+      "title": "Draft a chat message…",
+      "description": "Prepare a message without sending it.",
+      "inputs": [
+        {
+          "name": "message",
+          "label": "Message",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "handler": {
+        "type": "open"
+      }
+    }
+  ],
+  "commandsClient": "commands.mjs"
+}

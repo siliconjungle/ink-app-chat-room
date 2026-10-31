@@ -1,0 +1,14 @@
+node_modules/
+.local/
+.env*
+*.log
+evidence/
+
+node_modules/
+dist/
+.local/
+.data/
+.env
+.env.*
+!.env.example
+*.log
